@@ -1,7 +1,7 @@
 # LibreriaGithub
 Este programa creará un repositorio en Github. Para ello utilizará varios métodos de autentificación.
 
-***Mediante:***
+## ***Métodos:***
 - Token
 - Fichero
 - User/Password
