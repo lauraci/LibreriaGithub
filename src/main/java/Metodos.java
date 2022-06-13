@@ -53,4 +53,19 @@ public class Metodos {
         }
     }
 
+    /** Método para conectarte con tú usuario y contraseña (No recomendado)
+     * @param user
+     * @param psw
+     */
+    public void accesoUserPsw(String user, String psw) {
+        try {
+            github = new GitHubBuilder().withPassword(user, psw).build();
+        } catch (IOException e) {
+            System.out.println("Error conexion con usuario o contraseña " + e.getMessage());
+        }
+
+    }
+
+
+
 }
