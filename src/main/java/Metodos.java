@@ -8,8 +8,8 @@ public class Metodos {
     GitHub github;
     GHRepository NombreRepositorio;
 
-    /**
-     * @param Repositorio Este método recibirá por parámetro el nombre del repositorio.
+    /** Este método recibirá por parámetro el nombre del repositorio.
+     * @param Repositorio
      */
     public void crearRepositorio(String Repositorio) {
         try {
@@ -19,6 +19,20 @@ public class Metodos {
             System.out.println("No se ha podido conectar " + e.getMessage());
         }
 
+    }
+
+    /** Este método recibirá por parámetro el token creado por nosotros mediante github.
+     * @param Token
+     */
+    public void accesoToken(String Token) {
+        try {
+            github = new GitHubBuilder().withOAuthToken(Token).build();
+            github = GitHub.connect();
+        } catch (IOException e) {
+
+        } finally {
+            System.out.println("Conectado con éxito");
+        }
     }
 
 }
